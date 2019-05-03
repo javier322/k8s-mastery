@@ -1,2 +1,4 @@
 FROM nginx
-COPY build /usr/share/nginx/html
+COPY . /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
+RUN npm run build
