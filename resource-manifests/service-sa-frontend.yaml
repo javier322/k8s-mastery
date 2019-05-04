@@ -9,4 +9,4 @@ spec:
     protocol: TCP          # 4
     targetPort: 80         # 5
   selector:                # 6
-app: sa-frontend 
+    app: sa-frontend       # 7
