@@ -50,7 +50,7 @@ class App extends Component {
                         <h2>Sentiment Analysesr</h2>
 
                         <TextField ref={ref => this.textField = ref} onKeyUp={this.onEnterPress.bind(this)}
-                                   hintText="Type your sentence."/>
+                                   hintText="Type your sentence kimbo."/>
                         <RaisedButton  label="Send" style={style} onClick={this.analyzeSentence.bind(this)}/>
                         {polarityComponent}
                     </Paper>
