@@ -1,10 +1,16 @@
-FROM node:alpine as builder
-COPY package.json /sa-frontend/
-WORKDIR /sa-frontend
-RUN npm install
-COPY . .
+
+
+FROM node:12.0.0 as builder
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+COPY package.json /usr/src/app/package.json
+RUN npm install --silent
+RUN npm install react-scripts@1.1.1 -g --silent
+COPY . /usr/src/app
 RUN npm run build
 
-FROM nginx:1.15-alpine
-COPY --from=builder /sa-frontend/build /usr/share/nginx/html
-EXPOSE 80
+
+
+FROM nginx
+COPY --from=builder /usr/src/app/build /usr/share/nginx/html

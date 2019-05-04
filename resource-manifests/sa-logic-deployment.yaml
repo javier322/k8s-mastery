@@ -16,8 +16,9 @@ spec:
         app: sa-logic
     spec:
       containers:
-      - image: rinormaloku/sentiment-analysis-logic:feedback
-        imagePullPolicy: Always
-        name: sa-logic
-        ports:
-          - containerPort: 5000
+
+        - image: javier322/sentiment-analysis-logic
+          imagePullPolicy: Always
+          name: sa-logic
+          ports:
+            - containerPort: 5000
