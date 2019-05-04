@@ -1,19 +1,19 @@
 apiVersion: extensions/v1beta1
-kind: Deployment                                          # 1
+kind: Deployment
 metadata:
   name: sa-frontend
 spec:
-  replicas: 2                                             # 2
+  replicas: 1
   minReadySeconds: 15
   strategy:
-    type: RollingUpdate                                   # 3
+    type: RollingUpdate
     rollingUpdate: 
-      maxUnavailable: 1                                   # 4
-      maxSurge: 1                                         # 5
+      maxUnavailable: 1
+      maxSurge: 1
   template:
     metadata:
       labels:
-        app: sa-frontend                                  # 6
+        app: sa-frontend
     spec:
       containers:
         - image: javier322/sentiment-analysis-frontend
@@ -21,3 +21,4 @@ spec:
           name: sa-frontend
           ports:
             - containerPort: 80
+
