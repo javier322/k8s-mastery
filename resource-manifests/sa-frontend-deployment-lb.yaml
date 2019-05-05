@@ -16,7 +16,7 @@ spec:
         app: sa-frontend
     spec:
       containers:
-        - image: javier322/sentiment-analysis-frontend:latest
+        - image: javier322/sentiment-analysis-frontend:{{BUILD_NUMBER}}
           imagePullPolicy: Always                         # 7
           name: sa-frontend
           ports:
