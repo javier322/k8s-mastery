@@ -48,7 +48,7 @@ class App extends Component {
                     <Paper zDepth={1} className="content">
 
                         <h2>Sentiment Analysesr </h2>
-                        <h1> Autor: rinormaloku</h1>
+                        <p> Autor: rinormaloku<p>
 
                         <TextField ref={ref => this.textField = ref} onKeyUp={this.onEnterPress.bind(this)}
                                    hintText="I am testing something."/>
