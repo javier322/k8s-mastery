@@ -46,7 +46,7 @@ class App extends Component {
             <MuiThemeProvider>
                 <div className="centerize">
                     <Paper zDepth={1} className="content">
-
+//probando
                         <h2>Sentiment Analysesr </h2>
                         <p> Autor: rinormaloku</p>
 
