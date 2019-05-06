@@ -47,7 +47,8 @@ class App extends Component {
                 <div className="centerize">
                     <Paper zDepth={1} className="content">
 
-                        <h2>Sentiment Analysesr masimaimOJNASInaijmaoimaismiamaimsss</h2>
+                        <h2>Sentiment Analysesr </h2>
+                        <h1> Autor: rinormaloku</h1>
 
                         <TextField ref={ref => this.textField = ref} onKeyUp={this.onEnterPress.bind(this)}
                                    hintText="I am testing something."/>
